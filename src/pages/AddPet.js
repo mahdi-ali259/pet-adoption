@@ -5,7 +5,7 @@ function AddPet() {
   const [petName, setPetName] = useState("");
   const [petType, setPetType] = useState("Dog");
   const [age, setAge] = useState("");
-  const [image, setImage] = useState("");
+  const [, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [message, setMessage] = useState("");
 

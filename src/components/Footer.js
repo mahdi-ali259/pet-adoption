@@ -70,32 +70,32 @@ function Footer() {
             <h5>Contact Us</h5>
 
             <div className="contact-item">
-              <a href=""><LocationPin /></a>
+              <a href="/"><LocationPin /></a>
               <strong>Address:</strong>
               <b>Tyre, Lebanon</b>
             </div>
 
             <div className="contact-item">
-              <a href=""><MailRounded /></a>
+              <a href="/"><MailRounded /></a>
               <strong>Email:</strong> <b>info@petadopt.com</b>
             </div>
 
             <div className="contact-item">
-              <a href=""><Phone /></a>
+              <a href="/"><Phone /></a>
               <strong>Phone:</strong> <b>+961 71 095 739</b>
             </div>
 
             <div className="social-icons">
 
-              <a href="#">
+              <a href="/">
                 <InstagramIcon />
               </a>
 
-              <a href="#">
+              <a href="/">
                 <FacebookIcon />
               </a>
 
-              <a href="#">
+              <a href="/">
                 <LinkedInIcon />
               </a>
             
