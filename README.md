@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Pet Adoption Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+Pet Adoption Website is a frontend web application developed using ReactJS.  
+The main goal of this project is to help users browse pets available for adoption and provide a simple way to submit pet information through an online form.
 
-In the project directory, you can run:
+The website includes multiple pages such as Home, Adopt, Add Pet, About, and Contact.  
+It is designed to be responsive and user-friendly, using React components, routing, Bootstrap, and custom CSS.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Home page with a pet adoption landing section
+- Adopt page to display pets available for adoption
+- Add Pet form using React state
+- About page describing the website purpose
+- Contact page for user communication
+- Responsive design for desktop and mobile screens
+- Navigation between pages using React Router
+- Deployment using Vercel
+- Source code managed with Git and GitHub
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- ReactJS
+- JavaScript
+- HTML
+- CSS
+- Bootstrap
+- React Router
+- Git
+- GitHub
+- Vercel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+To run this project locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/mahdi-ali259/pet-adoption.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Open the project folder:
 
-### `npm run eject`
+```bash
+cd pet-adoption
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the project:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+5. Open the website in the browser:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+http://localhost:3000 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Live Demo
 
-### Code Splitting
+Vercel Website Link:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Live Website](https://pet-adoption-6x9g.vercel.app)
 
-### Analyzing the Bundle Size
+## GitHub Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[GitHub Repository](https://github.com/mahdi-ali259/pet-adoption) 
 
-### Making a Progressive Web App
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Home Page
 
-### Advanced Configuration
+Add screenshot here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Adopt Page
 
-### Deployment
+Add screenshot here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Add Pet Page
 
-### `npm run build` fails to minify
+Add screenshot here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contact Page
+
+Add screenshot here.
+
+## Author
+
+Mahdi Ali
+
+## Course
+
+CSCI390 Web Programming
+
+## Project Phase
+
+Project Phase 2
