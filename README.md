@@ -80,23 +80,23 @@ Vercel Website Link:
 
 ### Home Page
 
-Add screenshot here.
+![Home Page](screenshots/home.png)
 
 ### Adopt Page
 
-Add screenshot here.
+![Adopt Page](screenshots/adopt.png)
 
 ### Add Pet Page
 
-Add screenshot here.
+![Add Pet Page](screenshots/addpet.png)
 
 ### Contact Page
 
-Add screenshot here.
+![Contact Page](screenshots/contact.png)
 
 ## Author
 
-Mahdi Ali
+Mahdi Ali & Malak Watfa
 
 ## Course
 
