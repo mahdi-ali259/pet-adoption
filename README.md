@@ -80,19 +80,19 @@ Vercel Website Link:
 
 ### Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](src/screenshots/home.png)
 
 ### Adopt Page
 
-![Adopt Page](screenshots/adopt.png)
+![Adopt Page](src/screenshots/adopt.png)
 
 ### Add Pet Page
 
-![Add Pet Page](screenshots/addpet.png)
+![Add Pet Page](src/screenshots/addpet.png)
 
 ### Contact Page
 
-![Contact Page](screenshots/contact.png)
+![Contact Page](src/screenshots/contact.png)
 
 ## Author
 
