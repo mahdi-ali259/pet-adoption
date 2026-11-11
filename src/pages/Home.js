@@ -1,126 +1,62 @@
 import { Link } from "react-router-dom";
-import { MailRounded } from "@mui/icons-material";
+import { Favorite, FavoriteBorder } from "@mui/icons-material";
 
-import pet1 from "../assets/pet1.jpg";
-import pet2 from "../assets/pet2.jpg";
-import pet3 from "../assets/pet3.jpg";
+import HomeHero from "../assets/HomeHero.webp";
 import PetCard1 from "../assets/PetCard1.jpg";
 import PetCard2 from "../assets/PetCard2.jpg";
 import PetCard3 from "../assets/PetCard3.jpg";
 
-import addpet from "../assets/addpet.jpg";
-import aboutImg from "../assets/About.jpg";
+import RehomeImage from "../assets/RehomeImage.webp";
+import HomeAboutImage from "../assets/HomeAboutImage.webp";
+import HomeRehomeAboutImage from "../assets/HomeRehomeAboutImage.webp";
+import HomeContactImage from "../assets/HomeContactImage.webp";
 
-function Home() {
+const featuredPets = [
+  {
+    id: 1,
+    name: "Max",
+    description: "1 year old • Friendly dog",
+    image: PetCard1
+  },
+  {
+    id: 2,
+    name: "Luna",
+    description: "1 year old • Cute cat",
+    image: PetCard2
+  },
+  {
+    id: 3,
+    name: "Rocky",
+    description: "2 years old • Playful dog",
+    image: PetCard3
+  }
+];
+
+const Home = ({ onSelectPet, favourites = [], onToggleFavourite }) => {
   return (
-    <>
-      <section
-        id="home"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#home"
-            data-bs-slide-to="0"
-            className="active"
-          ></button>
-
-          <button
-            type="button"
-            data-bs-target="#home"
-            data-bs-slide-to="1"
-          ></button>
-
-          <button
-            type="button"
-            data-bs-target="#home"
-            data-bs-slide-to="2"
-          ></button>
+    <div className="home-page">
+      <section id="home" className="home-hero">
+        <div className="home-hero-text">
+          <div className="container">
+            <div className="home-hero-content">
+              <h1>
+                <span>Adopt.</span>{" "}
+                <span className="home-hero-heading-navy">Don’t Shop.</span>
+              </h1>
+              <p>Find your new best friend and give a pet a loving home.</p>
+              <Link to="/pets" className="btn btn-main">
+                Find Your Pet
+              </Link>
+            </div>
+          </div>
         </div>
-
-        <div className="carousel-inner">
-
-          <div className="carousel-item active">
-            <img
-              src={pet1}
-              alt="pet1"
-              className="d-block w-100"
-            />
-
-            <div className="carousel-caption">
-              <h3>Find Your New Best Friend</h3>
-
-              <p>Give a pet a loving home today</p>
-
-              <Link to="/pets" className="btn btn-main">
-                Adopt Now
-              </Link>
-            </div>
-          </div>
-
-          <div className="carousel-item">
-            <img
-              src={pet2}
-              alt="pet2"
-              className="d-block w-100"
-            />
-
-            <div className="carousel-caption">
-              <h3>They Need You</h3>
-
-              <p>
-                Thousands of pets are waiting for a family
-              </p>
-
-              <Link to="/pets" className="btn btn-main">
-                View Pets
-              </Link>
-            </div>
-          </div>
-
-          <div className="carousel-item">
-            <img
-              src={pet3}
-              alt="pet3"
-              className="d-block w-100"
-            />
-
-            <div className="carousel-caption">
-              <h3>Adopt, Don't Shop</h3>
-
-              <p>
-                Save a life and gain a loyal companion
-              </p>
-
-              <Link to="/pets" className="btn btn-main">
-                Start Adopting
-              </Link>
-            </div>
-          </div>
-
+        <div className="home-hero-media">
+          <img
+            src={HomeHero}
+            className="home-hero-image"
+            alt="A dog resting its face and both paws on a white ledge"
+          />
         </div>
-
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#home"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon"></span>
-        </button>
-
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#home"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon"></span>
-        </button>
-
       </section>
 
       <section
@@ -130,215 +66,173 @@ function Home() {
         <div className="container">
 
           <h2 className="text-center mb-5">
-            Meet Our Pets 🐾
+            Meet Our Pets
           </h2>
 
-          <div className="row">
+          <div className="row gy-4">
 
-            <div className="col-md-4">
-              <div className="card pet-card">
+            {featuredPets.map((pet) => (
+              <div key={pet.id} className="col-md-4">
+                <div className="card pet-card">
 
-                <img
-                  src={PetCard1}
-                  className="card-img-top"
-                  alt="pet"
-                />
+                  <div className="pet-card-photo">
+                    <img
+                      src={pet.image}
+                      className={`card-img-top pet-card-image-${pet.id}`}
+                      alt="pet"
+                    />
+                  </div>
 
-                <div className="card-body text-center">
+                  <div className="card-body text-center">
 
-                  <h5 className="card-title">
-                    Max
-                  </h5>
+                    <h5 className="card-title">
+                      {pet.name}
+                    </h5>
 
-                  <p className="card-text">
-                    1 year old • Friendly dog
-                  </p>
+                    <p className="card-text">
+                      {pet.description}
+                    </p>
 
-                  <Link
-                    to="/pet1"
-                    className="btn btn-main mt-3"
-                  >
-                    Adopt Me
-                  </Link>
+                    <div className="pet-card-actions">
+                      <button
+                        type="button"
+                        className="pet-favourite-button"
+                        aria-label={`${favourites.includes(pet.id) ? "Remove" : "Add"} ${pet.name} ${favourites.includes(pet.id) ? "from" : "to"} favourites`}
+                        aria-pressed={favourites.includes(pet.id)}
+                        onClick={() => onToggleFavourite(pet.id)}
+                      >
+                        {favourites.includes(pet.id) ? <Favorite aria-hidden="true" /> : <FavoriteBorder aria-hidden="true" />}
+                      </button>
+                      <Link
+                        to="/pets"
+                        onClick={() => onSelectPet(pet.id)}
+                        className="btn btn-main"
+                      >
+                        Adopt Me
+                      </Link>
+                    </div>
 
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card pet-card">
-
-                <img
-                  src={PetCard2}
-                  className="card-img-top"
-                  alt="pet"
-                />
-
-                <div className="card-body text-center">
-
-                  <h5 className="card-title">
-                    Luna
-                  </h5>
-
-                  <p className="card-text">
-                    1 year old • Cute cat
-                  </p>
-
-                  <Link
-                    to="/pet2"
-                    className="btn btn-main mt-3"
-                  >
-                    Adopt Me
-                  </Link>
-
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card pet-card">
-
-                <img
-                  src={PetCard3}
-                  className="card-img-top"
-                  alt="pet"
-                />
-
-                <div className="card-body text-center">
-
-                  <h5 className="card-title">
-                    Rocky
-                  </h5>
-
-                  <p className="card-text">
-                    2 years old • Playful dog
-                  </p>
-
-                  <Link
-                    to="/pet3"
-                    className="btn btn-main mt-3"
-                  >
-                    Adopt Me
-                  </Link>
-
-                </div>
-              </div>
-            </div>
-
+            ))}
+          </div>
+          <div className="home-featured-more">
+            <Link
+              to="/pets"
+              onClick={() => onSelectPet("all")}
+              className="btn btn-main"
+            >
+              Meet More Pets
+            </Link>
           </div>
         </div>
       </section>
 
-      <section
-        id="addpet"
-        className="add-home-section py-5 about-section"
+      <div
+        className="home-story-sections"
+        style={{ backgroundImage: `url(${HomeRehomeAboutImage})` }}
       >
-        <div className="container">
-
-          <div className="row align-items-center">
-
-            <div className="col-md-6">
-
-              <h2>
-                Need to Rehome Your Pet? 🐾
-              </h2>
-
-              <p>
-                If you can no longer care for your pet,
-                let us help find a loving new home.
-              </p>
-
-              <Link
-                to="/addpet"
-                className="btn btn-main mt-3"
-              >
-                Add Your Pet
-              </Link>
-
+        <section id="addpet" className="home-rehome">
+          <div className="home-rehome-text">
+            <div className="container">
+              <div className="home-rehome-content">
+                <h2>Need to Rehome Your Pet?</h2>
+                <div className="home-story-mobile-media">
+                  <img
+                    src={RehomeImage}
+                    className="home-rehome-mobile-image"
+                    alt="A sleeping dog resting in its bed"
+                  />
+                </div>
+                <div className="home-story-copy">
+                  <p>
+                    If you can no longer care for your pet,
+                    let us help find a loving new home.
+                  </p>
+                  <Link to="/addpet" className="btn btn-main mt-3">
+                    Add Your Pet
+                  </Link>
+                </div>
+              </div>
             </div>
-
-            <div className="col-md-6 text-center">
-
-              <img
-                src={addpet}
-                className="img-fluid add-home-img"
-                alt="add pet"
-              />
-
-            </div>
-
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        id="about"
-        className="about-section py-5"
-      >
+        <section id="about" className="home-about">
+          <div className="home-about-text">
+            <div className="container">
+              <div className="home-about-content">
+                <h2>About Us</h2>
+                <div className="home-story-mobile-media">
+                  <img
+                    src={HomeAboutImage}
+                    className="home-about-mobile-image"
+                    alt="A ginger cat enjoying a gentle pet on the head"
+                  />
+                </div>
+                <div className="home-story-copy">
+                  <p>We are dedicated to helping pets find loving homes.</p>
+                  <p>Every pet deserves a second chance.</p>
+                  <Link to="/about" className="btn btn-main mt-3">
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="support" className="home-support" aria-labelledby="home-support-heading">
         <div className="container">
-
-          <div className="row align-items-center">
-
-            <div className="col-md-6">
-
-              <img
-                src={aboutImg}
-                className="img-fluid about-img"
-                alt="about"
-              />
-
-            </div>
-
-            <div className="col-md-6">
-
-              <h2>
-                About Us 🐾
-              </h2>
-
-              <p>
-                We are dedicated to helping pets
-                find loving homes.
-              </p>
-
-              <p>
-                Every pet deserves a second chance.
-              </p>
-
-              <Link
-                to="/about"
-                className="btn btn-main mt-3"
-              >
-                Learn More
-              </Link>
-
-            </div>
-
+          <h2 id="home-support-heading" className="text-center">Support</h2>
+          <div className="home-support-grid">
+            <article className="home-support-card">
+              <h3>ADOPT</h3>
+              <p>Provide comfort<br />&amp; care to<br />rescued animals.</p>
+            </article>
+            <article className="home-support-card">
+              <h3>DONATE</h3>
+              <p>Donate for food<br />and medical care of<br />homeless animals.</p>
+            </article>
+            <article className="home-support-card">
+              <h3>FOSTER</h3>
+              <p>Be foster parents<br />to animals<br />in need.</p>
+            </article>
           </div>
         </div>
       </section>
 
       <section
         id="contact"
-        className="contact-section about-section py-5"
+        className="contact-section about-section pb-5"
+        style={{ backgroundImage: `url(${HomeContactImage})` }}
       >
-        <div className="container">
+        <div className="container home-contact-layout">
+          <div className="home-contact-content">
+          <div className="home-contact-intro">
+            <h2 className="text-center mb-3">
+              Contact Us <br />
+            </h2>
+            <div className="home-contact-mobile-media">
+              <img
+                src={HomeContactImage}
+                className="home-contact-mobile-image"
+                alt="A dog wearing sunglasses beside a laptop"
+              />
+            </div>
+            <p className="text-center mb-0">
+              Have questions? We'd love to hear from you!
+            </p>
+          </div>
 
-          <h2 className="text-center mb-5">
-            Contact Us <br /><MailRounded />
-          </h2>
-
-          <p className="text-center text-muted mb-4">
-            Have questions? We'd love to hear from you!
-          </p>
-
-          <div className="row justify-content-center">
-
-            <div className="col-md-6">
-
-              <form>
+              <form className="home-contact-form">
 
                 <div className="mb-3">
+                  <label htmlFor="home-contact-name" className="visually-hidden">Your Name</label>
                   <input
+                    id="home-contact-name"
                     type="text"
                     className="form-control"
                     placeholder="Your Name"
@@ -346,7 +240,9 @@ function Home() {
                 </div>
 
                 <div className="mb-3">
+                  <label htmlFor="home-contact-email" className="visually-hidden">Email</label>
                   <input
+                    id="home-contact-email"
                     type="email"
                     className="form-control"
                     placeholder="you@example.com"
@@ -354,7 +250,9 @@ function Home() {
                 </div>
 
                 <div className="mb-3">
+                  <label htmlFor="home-contact-message" className="visually-hidden">Your Message</label>
                   <textarea
+                    id="home-contact-message"
                     className="form-control"
                     rows="4"
                     placeholder="Your Message"
@@ -369,15 +267,12 @@ function Home() {
                 </button>
 
               </form>
-
-            </div>
-
           </div>
         </div>
       </section>
 
-    </>
+    </div>
   );
-}
+};
 
 export default Home;

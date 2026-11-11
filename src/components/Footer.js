@@ -15,7 +15,7 @@ function Footer() {
           <div className="col-md-4">
 
             <h3 className="footer-logo">
-              PetAdopt 🐾
+              Pawzy
             </h3>
 
             <p>

@@ -1,56 +1,33 @@
-import AboutImage from "../assets/About.jpg";
+import { Link } from "react-router-dom";
+import AboutImage from "../assets/AboutImage.webp";
 
-function About() {
+const About = () => {
   return (
-
-    <div className="about-section py-5 back">
-
+    <section className="about-page" style={{ backgroundImage: `url(${AboutImage})` }}>
       <div className="container">
-
-        <div className="row align-items-center">
-
-          <div className="col-md-6">
-
+        <div className="about-page-content">
+          <h1>
+            <span>Every Pet</span>{" "}
+            <span className="about-page-heading-navy">Deserves a Loving Home</span>
+          </h1>
+          <div className="about-page-mobile-media">
             <img
               src={AboutImage}
-              alt="about"
-              className="img-fluid about-img"
+              alt="Two cats and two dogs sitting together"
+              className="about-page-mobile-image"
             />
-
           </div>
-
-          <div className="col-md-6">
-
-            <h2>
-              About PetAdopt 🐾
-            </h2>
-
-            <p>
-              PetAdopt is a platform dedicated to helping
-              animals find loving homes.
-              We believe every pet deserves care,
-              love, and a second chance.
-            </p>
-
-            <p>
-              Our mission is to connect people who care
-              with pets who need them the most.
-            </p>
-
-            <p>
-              Together, we can make a difference in
-              their lives.
-            </p>
-
-          </div>
-
+          <p>
+            At PetAdopt, we help pets find caring families and a fresh start.
+            Explore our pets and welcome a new companion into your home.
+          </p>
+          <Link to="/pets" className="btn btn-main about-page-button">
+            Make a Pet
+          </Link>
         </div>
-
       </div>
-
-    </div>
-
+    </section>
   );
-}
+};
 
 export default About;

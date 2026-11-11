@@ -1,107 +1,82 @@
-# Pet Adoption Website
+# Pawzy
 
-## Project Description
+Pawzy is a responsive pet-adoption website that helps people discover pets and find them loving homes. Users can browse animals, view their details, save favourites, and add a pet to the listings.
 
-Pet Adoption Website is a frontend web application developed using ReactJS.  
-The main goal of this project is to help users browse pets available for adoption and provide a simple way to submit pet information through an online form.
+## Main features
 
-The website includes multiple pages such as Home, Adopt, Add Pet, About, and Contact.  
-It is designed to be responsive and user-friendly, using React components, routing, Bootstrap, and custom CSS.
+- Three featured pets on Home: Max, Luna, and Rocky.
+- Pet listings with animal-type filters and individual details.
+- Favourite hearts and a drawer for viewing saved pets.
+- An Add Pet form with validation and an optional local photo.
+- A Contact form that validates entries and shows a local confirmation alert.
+- A demo login screen and layouts for desktop and mobile.
+- A visual Support section for adoption, donations, and fostering; its actions are planned for later.
 
-## Features
+This is an **individual Phase 1 frontend project**. Added pets, favourites, and login status reset on refresh. There is no real authentication or message delivery. Backend integration is planned for a later phase.
 
-- Home page with a pet adoption landing section
-- Adopt page to display pets available for adoption
-- Add Pet form using React state
-- About page describing the website purpose
-- Contact page for user communication
-- Responsive design for desktop and mobile screens
-- Navigation between pages using React Router
-- Deployment using Vercel
-- Source code managed with Git and GitHub
+## Technologies
 
-## Technologies Used
+React, JavaScript, HTML, CSS, React Router, Bootstrap, Material UI Icons, React Icons, and Nunito. Development and builds use `react-scripts` (Create React App).
 
-- ReactJS
-- JavaScript
-- HTML
-- CSS
-- Bootstrap
-- React Router
-- Git
-- GitHub
-- Vercel
+## Run locally
 
-## Setup Instructions
-
-To run this project locally:
-
-1. Clone the repository:
+Install Node.js 20 or newer and npm, then run:
 
 ```bash
 git clone https://github.com/mahdi-ali259/pet-adoption.git
-```
-
-2. Open the project folder:
-
-```bash
 cd pet-adoption
-```
-
-3. Install dependencies:
-
-```bash
-npm install
-```
-
-4. Start the project:
-
-```bash
+npm ci
 npm start
 ```
 
-5. Open the website in the browser:
+Open `http://localhost:3000`. For demo login, use any valid email and a nonblank sample password.
+
+Create a production build:
 
 ```bash
-http://localhost:3000 
+npm run build
 ```
 
-## Live Demo
+The build is saved in `build/`.
 
-Vercel Website Link:
+## UI screenshots
 
-[Live Website](https://pet-adoption-6x9g.vercel.app)
+![Home page on desktop.](docs/screenshots/home-desctop.png)
 
-## GitHub Repository
+Home page on desktop.
 
-[GitHub Repository](https://github.com/mahdi-ali259/pet-adoption) 
+![Pet listings and animal-type filters.](docs/screenshots/pets-desctop.png)
 
-## Screenshots
+Pet listings and animal-type filters.
 
-### Home Page
+![Details of a selected pet.](docs/screenshots/pet-details.png)
 
-![Home Page](src/screenshots/home.png)
+Details of a selected pet.
 
-### Adopt Page
+![Form for adding a pet.](docs/screenshots/add-pet.png)
 
-![Adopt Page](src/screenshots/adopt.png)
+Form for adding a pet.
 
-### Add Pet Page
+![Saved pets in the favourites drawer.](docs/screenshots/favourites.png)
 
-![Add Pet Page](src/screenshots/addpet.png)
+Saved pets in the favourites drawer.
 
-### Contact Page
+![Home page on mobile.](docs/screenshots/home-mobile.png)
 
-![Contact Page](src/screenshots/contact.png)
+Home page on mobile.
 
-## Author
+## Links
 
-Mahdi Ali & Malak Watfa
+- [GitHub repository](https://github.com/mahdi-ali259/pet-adoption)
+- [Live website on Vercel](https://pet-adoption-6x9g.vercel.app) — recorded in the previous project documentation; current availability has not been checked.
 
-## Course
+## Submission
 
-CSCI390 Web Programming
+- **Author:** Mahdi Ali — 12231975
+- **Course:** CSCI426 Advanced Web Programming
+- **Instructor:** Ghadir Khalil
+- **Project:** Individual Phase 1 frontend submission
 
-## Project Phase
+## Credits
 
-Project Phase 2
+Nunito is loaded through Google Fonts. Icons come from Material UI Icons and React Icons. Responsive layout uses Bootstrap.
