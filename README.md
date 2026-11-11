@@ -68,7 +68,7 @@ Home page on mobile.
 ## Links
 
 - [GitHub repository](https://github.com/mahdi-ali259/pet-adoption)
-- [Live website on Vercel](https://pet-adoption-6x9g.vercel.app) — recorded in the previous project documentation; current availability has not been checked.
+- [Pawzy live website](https://pawzy-pets.vercel.app)
 
 ## Submission
 
